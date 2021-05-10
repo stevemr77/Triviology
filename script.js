@@ -31,3 +31,4 @@ function updateCard(questionData) {
 function handleAnswerButton(event) {
   console.log(event);
 }
+
