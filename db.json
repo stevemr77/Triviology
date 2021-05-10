@@ -1,0 +1,18 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "How many states are in the United States?",
+      "rightAnswer": "50",
+      "wrongAnswers": ["51", "44", "45"],
+      "points": 10
+    },
+    {
+      "id": 2,
+      "question": "How long is a soccer match?",
+      "rightAnswer": "90 minutes",
+      "wrongAnswers": ["60 minutes", "100 minutes", "30 minutes"],
+      "points": 10
+    }
+  ]
+}
