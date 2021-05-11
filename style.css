@@ -1,5 +1,50 @@
+:root { 
+  --color1: #5F0F40;
+  --color2: #9A031E;
+  --color3: #FB8B24;
+  --color4: #E36414;
+  --color5: #0F4C5C;
+}
+
+body {
+
+}
+
+header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  background-color: var(--color5);
+  color: rgb(249, 252, 255);
+}
+
+h1 {
+  font-size: 50px;
+  margin-left: 60px;
+  border-bottom: 5px var(--color3) solid;
+  padding: 0px 40px;
+}
+
+
+#pointsDisplay {
+  margin: auto 35px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  color: var(--color4);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 30px;
+  border-radius: 50%;
+  box-shadow: 5px 5px var(--color3);
+}
+
+
 .card {
   height: 100px;
   width: 600px;
   border: solid black 1px;
 }
+/* these are special styles */
