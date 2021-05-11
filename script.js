@@ -5,54 +5,73 @@ const questionElement = document.querySelector(".question");
 
 fetch(questionsURL)
   .then((response) => response.json())
-  .then((json) => updateCard(json[0])); //TODO: want a function that randomly picks a question.
+  .then((json) => { 
+    const randIndex = Math.floor(Math.random() * json.length )
+    updateCard(json[randIndex])
+  });
 
-//   function shuffleArray(arr) {
-//     let placeHolder = arr.length;
-//     // There remain elements to shuffle
-//     while (0 !== placeHolder) {
-//       // Pick a remaining element
-//       let randId = Math.floor(Math.random() * placeHolder);
-//       placeHolder -= 1;
-//       // Swap it with the current element.
-//       let tmp = arr[placeHolder];
-//       arr[placeHolder] = arr[randId];
-//       arr[randId] = tmp;
-//     }
-//     return arr;
-//   }
-//   // Usage of shuffle
-//   let arr = [1, 2, 3, 4, 5];
-//   arr = shuffleArray(arr);
-//   console.log(arr);
+function shuffleArray(arr) {
+  let remainingIndices = arr.length;
 
+  while (0 !== remainingIndices) {
+
+    let randIndex = Math.floor(Math.random() * remainingIndices);
+    remainingIndices -= 1;
+
+    let tempArr = arr[remainingIndices];
+    arr[remainingIndices] = arr[randIndex];
+    arr[randIndex] = tempArr;
+  }
+  return arr;
+}
 
 
-
-  
 
 function updateCard(questionData) {
-  const allAnswers = [questionData.rightAnswer].concat(
+  let allAnswers = [questionData.rightAnswer].concat(
     questionData.wrongAnswers
-  ); //TODO: we want a function that randomizes the order of this
+  );
+
+
+  allAnswers = shuffleArray(allAnswers)
+
+
 
   questionElement.innerHTML = questionData.question;
 
   allAnswers.forEach((answer, index) => {
     const buttonElement = document.createElement("button");
-    const labelElement = document.createElement("div");//add attributes class names or ids for styling these elements later
-    const answerElement = document.createElement("div");
-    const labelChar = String.fromCharCode(65 + index);
-    buttonElement.append(labelElement, answerElement);
-    labelElement.innerHTML = labelChar;
-    answerElement.innerHTML = answer;
-    answerContainerElement.append(buttonElement);
     buttonElement.addEventListener("click", handleAnswerButton);
-    // TODO: pass in correct answer somehow
+    buttonElement.data = { isCorrectAnswer: answer === questionData.rightAnswer }
+
+    const labelChar = String.fromCharCode(65 + index);
+
+    const labelElement = document.createElement("div");
+    labelElement.classList.add('answer-label')
+    labelElement.innerHTML = labelChar;
+
+    const answerElement = document.createElement("div");
+    answerElement.classList.add('answer-content')
+    answerElement.innerHTML = answer;
+
+    buttonElement.append(labelElement, answerElement);
+    answerContainerElement.append(buttonElement);
   });
 }
-//TODO: limit answers to 26. you know why!
-function handleAnswerButton(event) {
-  console.log(event);
+
+
+function handleAnswerButton() {
+  if (this.data.isCorrectAnswer) {
+    console.log('You got it right!')
+  } else {
+    console.log("You're WRONG :(")
+  }
 }
 
+//TODO: handle choosing correct answer
+
+
+//TODO: handle choosing wrong answer
+
+
+//TODO: limit answers to 26. you know why!
