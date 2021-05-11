@@ -7,24 +7,22 @@ fetch(questionsURL)
   .then((response) => response.json())
   .then((json) => updateCard(json[0])); //TODO: want a function that randomly picks a question.
 
-//   function shuffleArray(arr) {
-//     let placeHolder = arr.length;
-//     // There remain elements to shuffle
-//     while (0 !== placeHolder) {
-//       // Pick a remaining element
-//       let randId = Math.floor(Math.random() * placeHolder);
-//       placeHolder -= 1;
-//       // Swap it with the current element.
-//       let tmp = arr[placeHolder];
-//       arr[placeHolder] = arr[randId];
-//       arr[randId] = tmp;
-//     }
-//     return arr;
-//   }
-//   // Usage of shuffle
-//   let arr = [1, 2, 3, 4, 5];
-//   arr = shuffleArray(arr);
-//   console.log(arr);
+  function shuffleArray(arr) {
+    let remainingIndices = arr.length;
+    // There remain elements to shuffle
+    while (0 !== remainingIndices) {
+      console.log(remainingIndices)
+      // Pick a remaining element
+      let randIndex = Math.floor(Math.random() * remainingIndices);
+      remainingIndices -= 1;
+      // Swap it with the current element.
+      let tempArr = arr[remainingIndices];
+      arr[remainingIndices] = arr[randIndex];
+      arr[randIndex] = tempArr;
+    }
+    return arr;
+  }
+
 
 
 
@@ -32,9 +30,14 @@ fetch(questionsURL)
   
 
 function updateCard(questionData) {
-  const allAnswers = [questionData.rightAnswer].concat(
+  let allAnswers = [questionData.rightAnswer].concat(
     questionData.wrongAnswers
-  ); //TODO: we want a function that randomizes the order of this
+  );
+
+allAnswers = shuffleArray(allAnswers)
+
+
+
 
   questionElement.innerHTML = questionData.question;
 
