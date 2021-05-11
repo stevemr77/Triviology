@@ -5,23 +5,25 @@ const questionElement = document.querySelector(".question");
 
 fetch(questionsURL)
   .then((response) => response.json())
-  .then((json) => updateCard(json[0])); 
+  .then((json) => { 
+    const randIndex = Math.floor(Math.random() * json.length )
+    updateCard(json[randIndex])
+  });
 
-  function shuffleArray(arr) {
-    let remainingIndices = arr.length;
-    
-    while (0 !== remainingIndices) {
-      console.log(remainingIndices)
-      
-      let randIndex = Math.floor(Math.random() * remainingIndices);
-      remainingIndices -= 1;
-      
-      let tempArr = arr[remainingIndices];
-      arr[remainingIndices] = arr[randIndex];
-      arr[randIndex] = tempArr;
-    }
-    return arr;
+function shuffleArray(arr) {
+  let remainingIndices = arr.length;
+
+  while (0 !== remainingIndices) {
+
+    let randIndex = Math.floor(Math.random() * remainingIndices);
+    remainingIndices -= 1;
+
+    let tempArr = arr[remainingIndices];
+    arr[remainingIndices] = arr[randIndex];
+    arr[randIndex] = tempArr;
   }
+  return arr;
+}
 
 
 
@@ -31,7 +33,7 @@ function updateCard(questionData) {
   );
 
 
-allAnswers = shuffleArray(allAnswers)
+  allAnswers = shuffleArray(allAnswers)
 
 
 
@@ -40,30 +42,36 @@ allAnswers = shuffleArray(allAnswers)
   allAnswers.forEach((answer, index) => {
     const buttonElement = document.createElement("button");
     buttonElement.addEventListener("click", handleAnswerButton);
-    buttonElement.data = {isCorrectAnswer: answer === questionData.rightAnswer}
+    buttonElement.data = { isCorrectAnswer: answer === questionData.rightAnswer }
 
     const labelChar = String.fromCharCode(65 + index);
 
     const labelElement = document.createElement("div");
     labelElement.classList.add('answer-label')
     labelElement.innerHTML = labelChar;
-    
+
     const answerElement = document.createElement("div");
     answerElement.classList.add('answer-content')
     answerElement.innerHTML = answer;
-    
+
     buttonElement.append(labelElement, answerElement);
     answerContainerElement.append(buttonElement);
   });
 }
 
-//TODO: limit answers to 26. you know why!
 
 function handleAnswerButton() {
-  if (this.data.isCorrectAnswer){
+  if (this.data.isCorrectAnswer) {
     console.log('You got it right!')
   } else {
     console.log("You're WRONG :(")
   }
 }
 
+//TODO: handle choosing correct answer
+
+
+//TODO: handle choosing wrong answer
+
+
+//TODO: limit answers to 26. you know why!
