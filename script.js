@@ -5,17 +5,17 @@ const questionElement = document.querySelector(".question");
 
 fetch(questionsURL)
   .then((response) => response.json())
-  .then((json) => updateCard(json[0])); //TODO: want a function that randomly picks a question.
+  .then((json) => updateCard(json[0])); 
 
   function shuffleArray(arr) {
     let remainingIndices = arr.length;
-    // There remain elements to shuffle
+    
     while (0 !== remainingIndices) {
       console.log(remainingIndices)
-      // Pick a remaining element
+      
       let randIndex = Math.floor(Math.random() * remainingIndices);
       remainingIndices -= 1;
-      // Swap it with the current element.
+      
       let tempArr = arr[remainingIndices];
       arr[remainingIndices] = arr[randIndex];
       arr[randIndex] = tempArr;
@@ -24,10 +24,6 @@ fetch(questionsURL)
   }
 
 
-
-
-
-  
 
 function updateCard(questionData) {
   let allAnswers = [questionData.rightAnswer].concat(
@@ -43,23 +39,31 @@ allAnswers = shuffleArray(allAnswers)
 
   allAnswers.forEach((answer, index) => {
     const buttonElement = document.createElement("button");
+    buttonElement.addEventListener("click", handleAnswerButton);
+    buttonElement.data = {isCorrectAnswer: answer === questionData.rightAnswer}
+
+    const labelChar = String.fromCharCode(65 + index);
+
     const labelElement = document.createElement("div");
     labelElement.classList.add('answer-label')
+    labelElement.innerHTML = labelChar;
     
     const answerElement = document.createElement("div");
     answerElement.classList.add('answer-content')
-    
-    const labelChar = String.fromCharCode(65 + index);
-    buttonElement.append(labelElement, answerElement);
-    labelElement.innerHTML = labelChar;
     answerElement.innerHTML = answer;
+    
+    buttonElement.append(labelElement, answerElement);
     answerContainerElement.append(buttonElement);
-    buttonElement.addEventListener("click", handleAnswerButton);
-    // TODO: pass in correct answer somehow
   });
 }
+
 //TODO: limit answers to 26. you know why!
-function handleAnswerButton(event) {
-  console.log(event);
+
+function handleAnswerButton() {
+  if (this.data.isCorrectAnswer){
+    console.log('You got it right!')
+  } else {
+    console.log("You're WRONG :(")
+  }
 }
 
