@@ -34,8 +34,8 @@ function updateCard(questionData) {
     questionData.wrongAnswers
   );
 
-allAnswers = shuffleArray(allAnswers)
 
+allAnswers = shuffleArray(allAnswers)
 
 
 
@@ -43,8 +43,12 @@ allAnswers = shuffleArray(allAnswers)
 
   allAnswers.forEach((answer, index) => {
     const buttonElement = document.createElement("button");
-    const labelElement = document.createElement("div");//add attributes class names or ids for styling these elements later
+    const labelElement = document.createElement("div");
+    labelElement.classList.add('answer-label')
+    
     const answerElement = document.createElement("div");
+    answerElement.classList.add('answer-content')
+    
     const labelChar = String.fromCharCode(65 + index);
     buttonElement.append(labelElement, answerElement);
     labelElement.innerHTML = labelChar;
