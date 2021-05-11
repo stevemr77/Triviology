@@ -3,7 +3,7 @@ const answerContainerElement = document.querySelector(".answers-container");
 const questionElement = document.querySelector(".question");
 const cardsContainerElement = document.querySelector(".cards-container");
 
-let points = 0;
+
 
 function fetchQuestions() {
   fetch(questionsURL)
