@@ -7,6 +7,30 @@ fetch(questionsURL)
   .then((response) => response.json())
   .then((json) => updateCard(json[0])); //TODO: want a function that randomly picks a question.
 
+//   function shuffleArray(arr) {
+//     let placeHolder = arr.length;
+//     // There remain elements to shuffle
+//     while (0 !== placeHolder) {
+//       // Pick a remaining element
+//       let randId = Math.floor(Math.random() * placeHolder);
+//       placeHolder -= 1;
+//       // Swap it with the current element.
+//       let tmp = arr[placeHolder];
+//       arr[placeHolder] = arr[randId];
+//       arr[randId] = tmp;
+//     }
+//     return arr;
+//   }
+//   // Usage of shuffle
+//   let arr = [1, 2, 3, 4, 5];
+//   arr = shuffleArray(arr);
+//   console.log(arr);
+
+
+
+
+  
+
 function updateCard(questionData) {
   const allAnswers = [questionData.rightAnswer].concat(
     questionData.wrongAnswers
@@ -16,7 +40,7 @@ function updateCard(questionData) {
 
   allAnswers.forEach((answer, index) => {
     const buttonElement = document.createElement("button");
-    const labelElement = document.createElement("div");
+    const labelElement = document.createElement("div");//add attributes class names or ids for styling these elements later
     const answerElement = document.createElement("div");
     const labelChar = String.fromCharCode(65 + index);
     buttonElement.append(labelElement, answerElement);
