@@ -13,6 +13,62 @@
       "rightAnswer": "90 minutes",
       "wrongAnswers": ["60 minutes", "100 minutes", "30 minutes"],
       "points": 10
+    },
+    {
+      "id": 3,
+      "question": "Which of these IS a type of rock climbing?",
+      "rightAnswer": "Bouldering",
+      "wrongAnswers": ["Flat Facing", "Open Running", "Read Roping"],
+      "points": 10
+    },
+    {
+      "id": 4,
+      "question": "What is the capital of Indiana?",
+      "rightAnswer": "Indianapolis",
+      "wrongAnswers": ["Minneaopolis", "Merrieum", "Gary"],
+      "points": 10
+    },
+    {
+      "id": 5,
+      "question": "What is the complementary color of orange?",
+      "rightAnswer": "Blue",
+      "wrongAnswers": ["Red", "Yellow", "Green"],
+      "points": 10
+    },
+    {
+      "id": 6,
+      "question": "Which of these is NOT a Vincent Van Gogh painting?",
+      "rightAnswer": "The Water Lilly",
+      "wrongAnswers": ["The Starry Night", "Night Cafe", "Iries"],
+      "points": 10
+    },
+    {
+      "id": 7,
+      "question": "How tall are the Flatirons in Colorado?",
+      "rightAnswer": "8,148 ft",
+      "wrongAnswers": ["6,296 ft", "5,768 ft", "9,895 ft"],
+      "points": 10
+    },
+    {
+      "id": 8,
+      "question": "In which country did jack o'lanterns originate?",
+      "rightAnswer": "Ireland",
+      "wrongAnswers": ["The United States", "Mexico", "Russia"],
+      "points": 10
+    },
+    {
+      "id": 9,
+      "question": "Which of these is NOT a biblical name?",
+      "rightAnswer": "Brandon",
+      "wrongAnswers": ["Michael", "Daniel", "Leah"],
+      "points": 10
+    },
+    {
+      "id": 10,
+      "question": "What year was the iPhone released?",
+      "rightAnswer": "2007",
+      "wrongAnswers": ["2001", "2005", "2003"],
+      "points": 10
     }
   ]
 }
