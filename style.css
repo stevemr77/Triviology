@@ -17,7 +17,7 @@ header {
   align-content: center;
   background-color: var(--color5);
   color: rgb(249, 252, 255);
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
 /* brandon changed below this line in header */
 
@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-  font-family: 'Bungee Shade', cursive;
+  font-family: "Bungee Shade", cursive;
   font-size: 50px;
   margin-left: 60px;
   border-bottom: 5px var(--color3) solid;
@@ -38,7 +38,7 @@ h1 {
 }
 
 #pointsDisplay {
-  font-family: 'Concert One', cursive;
+  font-family: "Concert One", cursive;
   margin: auto 35px;
   padding: 25px;
   text-align: center;
@@ -50,6 +50,16 @@ h1 {
   font-size: 25px;
   border-radius: 50%;
   box-shadow: 5px 5px var(--color3);
+}
+
+#userDisplay {
+  display: flex;
+  flex-direction: row;
+}
+
+#userBtnContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
@@ -88,21 +98,20 @@ h1 {
 }
 /* brandon added 4 */
 button {
-  padding-left: 30px ;
+  padding-left: 30px;
   margin: 0 auto;
   height: 80px;
   width: 200px;
 }
 #next-question-button {
   margin: 20px;
-  padding:5px;
+  padding: 5px;
   font-size: 20px;
   /* border-radius: 5px; */
 }
 
 /* #point-display {
   /* font-family: 'Concert One', cursive; */
-} */
 
 #points-display-element {
   display: block;
@@ -116,10 +125,9 @@ button {
   line-height: 50px;
 }
 
-
 /* brandon added 5 */
 div {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 p {
   color: #555;
@@ -136,7 +144,7 @@ p {
 /* brandon added 6 */
 .cards-container {
   padding-top: 40px;
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
 }
 /* brandon added 7 */
 div.card.result-card {
