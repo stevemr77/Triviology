@@ -1,17 +1,22 @@
 # Quizology
-============
 
 ## Summary
 Quizology is a trivia game which has fun & curious facts. No particular theme was chosen for the questions but some resounding themes are soccer and space. Players are presented with a trivia question on a card and multiple choice answers. After an answer is selected, the player is informed of whether their selection is right or wrong and given the option to move on to the next question or quit.
 
 ## Technologies
 
-* [HTML5] (https://www.w3schools.com/html/) 
+* [HTML5](https://www.w3schools.com/html/) 
+
     ![HTML5 Logo](https://www.w3.org/html/logo/img/mark-word-icon.png)
-* [JavaScript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-    ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
-* [CSS3] (https://www.w3schools.com/css/) 
-    ![CSS3 Logo](https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg)
+
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+<img src="(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="126">
+
+* [CSS3](https://www.w3schools.com/css/) 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" height="126">
+
 
 ## Setup
 Clone(`git clone`) this repo to your local machine. Navigate(`cd <subdirectory name>`) into the newly created directory. 
@@ -51,9 +56,10 @@ function shuffleArray(arr) {
 ```
 
 ## Expansions
-
-
-## Status
+* skipping undesired questions
+* add different question formats (ex: true/false, type answer in input box, etc.)
+* Difficulty Level - awarding different quantity of points based on the difficulty of the question
+* like, dislike and review questions
 
 
 ## Contributors
