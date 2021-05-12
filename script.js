@@ -3,9 +3,14 @@ const answerContainerElement = document.querySelector(".answers-container");
 const questionElement = document.querySelector(".question");
 const cardsContainerElement = document.querySelector(".cards-container");
 
+const signUpButton = document.querySelector("#signUpButton");
+const logInButton = document.querySelector("#logInButton");
+const logInCardContainer = document.querySelector("#logInCardContainer");
+const signUpCard = document.querySelector("#signUpCard");
+const logInCard = document.querySelector("#logInCard");
+const closeCardButtons = document.querySelectorAll(".closeCardButton");
 
-
-function fetchQuestions() {
+function getQuestionsFromAPI() {
   fetch(questionsURL)
     .then(response => response.json())
     .then(json => {
@@ -70,14 +75,14 @@ function createResultCard(isCorrectAnswer) {
   cardElement.classList = "card result-card";
 
   const resultMessageElement = document.createElement("p");
-  resultMessageElement.setAttribute("id","result-message-element")
+  resultMessageElement.setAttribute("id", "result-message-element");
 
   const pointsDisplayElement = document.createElement("p");
-  pointsDisplayElement.setAttribute("id","result-message-element")
+  pointsDisplayElement.setAttribute("id", "result-message-element");
 
   const nextQuestionButtonElement = document.createElement("button");
   nextQuestionButtonElement.innerHTML = "Next Question &#9758;";
-  nextQuestionButtonElement.setAttribute("id","next-question-button")
+  nextQuestionButtonElement.setAttribute("id", "next-question-button");
   nextQuestionButtonElement.onclick = handleNextCard;
 
   if (isCorrectAnswer) {
@@ -99,8 +104,28 @@ function createResultCard(isCorrectAnswer) {
 function handleNextCard() {
   const cardElements = document.querySelectorAll(".result-card");
   cardElements.forEach(element => element.remove());
-  fetchQuestions();
+  getQuestionsFromAPI();
   console.log("Going to next card");
+}
+
+function handleSignUpButton() {
+  logInCardContainer.style.visibility = "visible";
+  signUpCard.style.visibility = "visible";
+  signUpCard.style.height = "auto";
+}
+
+function handleLogInButton() {
+  logInCardContainer.style.visibility = "visible";
+  logInCard.style.visibility = "visible";
+  logInCard.style.height = "auto";
+}
+
+function closeUserCard() {
+  logInCardContainer.style.visibility = "hidden";
+  signUpCard.style.visibility = "hidden";
+  signUpCard.style.height = 0;
+  logInCard.style.visibility = "hidden";
+  logInCard.style.height = 0;
 }
 
 function updatePointsDOM(points) {
@@ -110,7 +135,13 @@ function updatePointsDOM(points) {
 }
 
 function init() {
-  fetchQuestions();
+  signUpButton.addEventListener("click", handleSignUpButton);
+  logInButton.addEventListener("click", handleLogInButton);
+  closeCardButtons.forEach(btn => {
+    btn.onclick = closeUserCard;
+  });
+
+  getQuestionsFromAPI();
 }
 
 init();
