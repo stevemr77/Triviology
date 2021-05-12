@@ -69,19 +69,22 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  padding: 5em;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 
 #signUpCard {
   visibility: hidden;
-  margin-top: 5em;
+  padding: 5em;
+  height: auto;
 }
 #logInCard {
   visibility: hidden;
-  margin-top: 5em;
+  padding: 5em;
+  height: auto;
 }
 
 form {
@@ -89,7 +92,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  max-width: 66%;
+  width: 90%;
 }
 
 form > div {
@@ -100,6 +103,12 @@ form > div {
   font-size: 12px;
   color: red;
   line-height: 1;
+}
+
+.closeCardButton {
+  padding: none;
+  margin: none;
+  height: 2em;
 }
 
 input {
