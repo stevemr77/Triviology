@@ -4,18 +4,17 @@
 Quizology is a trivia game which has fun & curious facts. No particular theme was chosen for the questions but some resounding themes are soccer and space. Players are presented with a trivia question on a card and multiple choice answers. After an answer is selected, the player is informed of whether their selection is right or wrong and given the option to move on to the next question or quit.
 
 ## Technologies
-
 * [HTML5](https://www.w3schools.com/html/) 
 
-    ![HTML5 Logo](https://www.w3.org/html/logo/img/mark-word-icon.png)
+<img src="https://www.w3.org/html/logo/img/mark-word-icon.png" alt="HTML Logo" height="126">
 
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-<img src="(https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="126">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Javascript Logo" height="126">
 
 * [CSS3](https://www.w3schools.com/css/) 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" height="126">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/730px-CSS.3.svg.png" alt="CSS Logo" height="126">
 
 
 ## Setup
