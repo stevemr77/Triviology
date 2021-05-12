@@ -212,5 +212,11 @@
       "points": 10
     }
     
-  ]
+  ],
+  "users": {
+    "id":1,
+    "username": "Dirwin",
+    "password": "1234",
+    "points": 100
+  }
 }
