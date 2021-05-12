@@ -70,11 +70,14 @@ function createResultCard(isCorrectAnswer) {
   cardElement.classList = "card result-card";
 
   const resultMessageElement = document.createElement("p");
+  resultMessageElement.setAttribute("id","result-message-element")
 
   const pointsDisplayElement = document.createElement("p");
+  pointsDisplayElement.setAttribute("id","result-message-element")
 
   const nextQuestionButtonElement = document.createElement("button");
-  nextQuestionButtonElement.innerHTML = "Next Question ->";
+  nextQuestionButtonElement.innerHTML = "Next Question &#9758;";
+  nextQuestionButtonElement.setAttribute("id","next-question-button")
   nextQuestionButtonElement.onclick = handleNextCard;
 
   if (isCorrectAnswer) {
