@@ -142,8 +142,7 @@ function handleSignUpSubmit(event) {
     points: parseInt(document.querySelector("#pointsDisplay").innerText),
   };
 
-  const errorDiv = document.createElement("p");
-  errorDiv.classList.add("warning");
+  const errorDiv = document.querySelector("#signUpErrorDisplay");
 
   if (confirmPassword === password) {
     const options = {
@@ -154,23 +153,30 @@ function handleSignUpSubmit(event) {
       },
       body: JSON.stringify(newUser),
     };
-    //console.log(newUser);
 
-    fetch(usersURL, options)
+    fetch(usersURL + "?username=" + username)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
-        const userBtnContainer = document.querySelector("#userBtnContainer");
-        const userNameElement = document.createElement("h2");
-        userNameElement.innerHTML = username;
-        userBtnContainer.innerHTML = "";
-        userBtnContainer.append(userNameElement);
-        currentUser = json;
-        closeUserCard();
+        if (json.length > 0) {
+          errorDiv.innerHTML = "Username already taken by another user.";
+        } else {
+          fetch(usersURL, options)
+            .then(response => response.json())
+            .then(json => {
+              console.log(json);
+              const userBtnContainer =
+                document.querySelector("#userBtnContainer");
+              const userNameElement = document.createElement("h2");
+              userNameElement.innerHTML = username;
+              userBtnContainer.innerHTML = "";
+              userBtnContainer.append(userNameElement);
+              currentUser = json;
+              closeUserCard();
+            });
+        }
       });
   } else {
     errorDiv.innerHTML = "Passwords do not match";
-    event.target.prepend(errorDiv);
   }
 }
 
@@ -183,15 +189,15 @@ function handleLogInSubmit(event) {
   fetch(usersURL + "?username=" + username)
     .then(response => response.json())
     .then(json => {
-      const errorDiv = document.createElement("p");
+      const errorDiv = document.querySelector("#logInErrorDisplay");
       errorDiv.innerHTML = "Incorrect Username or Password";
-      errorDiv.classList.add("warning");
       const user = json[0];
       if (!user || user.password !== password) {
         event.target.prepend(errorDiv);
       } else {
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
+        userNameElement.classList.add("username");
         userNameElement.innerHTML = username;
         userBtnContainer.innerHTML = "";
         userBtnContainer.append(userNameElement);
