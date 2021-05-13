@@ -196,7 +196,7 @@ function handleLogInSubmit(event) {
         userBtnContainer.innerHTML = "";
         userBtnContainer.append(userNameElement);
         currentUser = user;
-        updatePointsDOM(user.points);
+        updatePointsDOM(parseInt(user.points));
         closeUserCard();
       }
     });
