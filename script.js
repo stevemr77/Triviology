@@ -15,14 +15,29 @@ const signUpForm = document.querySelector("#signUpForm");
 let currentUser;
 let currentUserId;
 
+const answeredQuestionIds = []
+
 function getQuestionsFromAPI() {
   fetch(questionsURL)
     .then(response => response.json())
     .then(json => {
-      const randIndex = Math.floor(Math.random() * json.length);
+      const randIndex = getRandomNewId(json.length);
       updateCard(json[randIndex]);
     });
 }
+
+function getRandomNewId(maxId){
+  const randIndex = Math.floor(Math.random() * maxId);
+  if (answeredQuestionIds.length === maxId){
+    alert("You've answered all the questions correctly!")
+  } else if (answeredQuestionIds.includes(randIndex +1)){
+    getRandomNewId(maxId)
+  } else {
+    return randIndex
+  }
+  return 0
+}
+
 function shuffleArray(arr) {
   let remainingIndices = arr.length;
   while (0 !== remainingIndices) {
@@ -45,7 +60,9 @@ function updateCard(questionData) {
     buttonElement.addEventListener("click", handleAnswerButton);
     buttonElement.data = {
       isCorrectAnswer: answer === questionData.rightAnswer,
+      questionId: questionData.id
     };
+
     const labelChar = String.fromCharCode(65 + index);
     const labelElement = document.createElement("div");
     labelElement.classList.add("answer-label");
@@ -61,6 +78,9 @@ function handleAnswerButton() {
   const answerButtonElements = document.querySelectorAll(".answer-button");
   answerButtonElements.forEach(element => (element.disabled = true));
   createResultCard(this.data.isCorrectAnswer);
+  if (this.data.isCorrectAnswer){
+    answeredQuestionIds.push(this.data.questionId)
+  }
 }
 function createResultCard(isCorrectAnswer) {
   const cardElement = document.createElement("div");
@@ -93,7 +113,6 @@ function handleNextCard() {
   const cardElements = document.querySelectorAll(".result-card");
   cardElements.forEach(element => element.remove());
   getQuestionsFromAPI();
-  console.log("Going to next card");
 }
 function handleSignUpButton() {
   logInCardContainer.style.visibility = "visible";
@@ -110,7 +129,6 @@ function handleLogInButton() {
 
 function handleSignUpSubmit(event) {
   event.preventDefault();
-  console.log("submit");
   const formData = new FormData(event.target);
   const username = formData.get("username");
   const password = formData.get("password");
@@ -122,8 +140,7 @@ function handleSignUpSubmit(event) {
     points: parseInt(document.querySelector("#pointsDisplay").innerText),
   };
 
-  const errorDiv = document.createElement("p");
-  errorDiv.classList.add("warning");
+  const errorDiv = document.querySelector("#signUpErrorDisplay");
 
   if (confirmPassword === password) {
     const options = {
@@ -134,12 +151,11 @@ function handleSignUpSubmit(event) {
       },
       body: JSON.stringify(newUser),
     };
-    //console.log(newUser);
 
-    fetch(usersURL, options)
+    fetch(usersURL + "?username=" + username)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
+
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
         userNameElement.innerHTML = username;
@@ -147,10 +163,27 @@ function handleSignUpSubmit(event) {
         userBtnContainer.append(userNameElement);
         currentUser = json;
         closeUserCard();
+      
+        if (json.length > 0) {
+          errorDiv.innerHTML = "Username already taken by another user.";
+        } else {
+          fetch(usersURL, options)
+            .then(response => response.json())
+            .then(json => {
+              console.log(json);
+              const userBtnContainer =
+                document.querySelector("#userBtnContainer");
+              const userNameElement = document.createElement("h2");
+              userNameElement.innerHTML = username;
+              userBtnContainer.innerHTML = "";
+              userBtnContainer.append(userNameElement);
+              currentUser = json;
+              closeUserCard();
+            });
+        }
       });
   } else {
     errorDiv.innerHTML = "Passwords do not match";
-    event.target.prepend(errorDiv);
   }
 }
 function handleLogInSubmit(event) {
@@ -161,15 +194,15 @@ function handleLogInSubmit(event) {
   fetch(usersURL + "?username=" + username)
     .then(response => response.json())
     .then(json => {
-      const errorDiv = document.createElement("p");
+      const errorDiv = document.querySelector("#logInErrorDisplay");
       errorDiv.innerHTML = "Incorrect Username or Password";
-      errorDiv.classList.add("warning");
       const user = json[0];
       if (!user || user.password !== password) {
         event.target.prepend(errorDiv);
       } else {
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
+        userNameElement.classList.add("username");
         userNameElement.innerHTML = username;
         userBtnContainer.innerHTML = "";
         userBtnContainer.append(userNameElement);
@@ -200,8 +233,6 @@ function updatePointsDOM(points) {
       body: JSON.stringify({ points: newPoints }),
     };
     fetch(usersURL + currentUser.id, options)
-      .then(response => response.json())
-      .then(json => console.log(json));
   }
 }
 function init() {
