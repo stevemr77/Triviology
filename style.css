@@ -8,6 +8,7 @@
 
 
 header {
+  
   line-height: 50px;
   display: flex;
   flex-direction: row;
@@ -41,6 +42,7 @@ body {
 }
 
 h1 {
+  cursor:none;
   font-family: "Bungee Shade", cursive;
   font-size: 65px;
   margin: auto 1em;
@@ -96,6 +98,7 @@ p {
 }
 
 #pointsDisplay {
+  cursor:none;
   font-family: 'Fredoka One', cursive;
   margin: 35px;
   padding: 25px;
