@@ -20,8 +20,8 @@ header {
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
   
   border-radius: 8px;
-  background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
-  background-size: 2000px;
+  background-image:  url("images/confetti-triviology\ \(1\).jpg");
+  background-size: cover;
 }
 
 
@@ -81,7 +81,8 @@ p {
   margin: 5em auto;
   border: rgba(85, 85, 85, 0.1) solid 2px;
   border-radius: 15px;
-  background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  background-image: url("images/canvas-triviology.jpg");
+  background-size: cover;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
 }
 */
