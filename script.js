@@ -2,7 +2,8 @@ const questionsURL = "http://localhost:3000/questions/";
 const usersURL = "http://localhost:3000/users/";
 const answerContainerElement = document.querySelector(".answers-container");
 const questionElement = document.querySelector(".question");
-const cardsContainerElement = document.querySelector(".cards-container");
+const cardContainerElement = document.querySelector(".card-container");
+
 const signUpButton = document.querySelector("#signUpButton");
 const logInButton = document.querySelector("#logInButton");
 const logInCardContainer = document.querySelector("#logInCardContainer");
@@ -12,10 +13,12 @@ const closeCardButtons = document.querySelectorAll(".closeCardButton");
 const logInForm = document.querySelector("#logInForm");
 const signUpForm = document.querySelector("#signUpForm");
 
+const resultCardElement = document.querySelector(".result-card");
+
 let currentUser;
 let currentUserId;
 
-const answeredQuestionIds = []
+const answeredQuestionIds = [];
 
 function getQuestionsFromAPI() {
   fetch(questionsURL)
@@ -26,16 +29,16 @@ function getQuestionsFromAPI() {
     });
 }
 
-function getRandomNewId(maxId){
+function getRandomNewId(maxId) {
   const randIndex = Math.floor(Math.random() * maxId);
-  if (answeredQuestionIds.length === maxId){
-    alert("You've answered all the questions correctly!")
-  } else if (answeredQuestionIds.includes(randIndex +1)){
-    getRandomNewId(maxId)
+  if (answeredQuestionIds.length === maxId) {
+    alert("You've answered all the questions correctly!");
+  } else if (answeredQuestionIds.includes(randIndex + 1)) {
+    getRandomNewId(maxId);
   } else {
-    return randIndex
+    return randIndex;
   }
-  return 0
+  return 0;
 }
 
 function shuffleArray(arr) {
@@ -60,7 +63,7 @@ function updateCard(questionData) {
     buttonElement.addEventListener("click", handleAnswerButton);
     buttonElement.data = {
       isCorrectAnswer: answer === questionData.rightAnswer,
-      questionId: questionData.id
+      questionId: questionData.id,
     };
 
     const labelChar = String.fromCharCode(65 + index);
@@ -78,22 +81,21 @@ function handleAnswerButton() {
   const answerButtonElements = document.querySelectorAll(".answer-button");
   answerButtonElements.forEach(element => (element.disabled = true));
   createResultCard(this.data.isCorrectAnswer);
-  if (this.data.isCorrectAnswer){
-    answeredQuestionIds.push(this.data.questionId)
+  cardContainerElement.classList.add("flip-card");
+  if (this.data.isCorrectAnswer) {
+    answeredQuestionIds.push(this.data.questionId);
   }
 }
 function createResultCard(isCorrectAnswer) {
-  const cardElement = document.createElement("div");
-  cardElement.classList = "card result-card";
-  const resultMessageElement = document.createElement("p");
-  resultMessageElement.setAttribute("id", "result-message-element");
+  const cardElement = resultCardElement;
 
-  const pointsDisplayElement = document.createElement("p");
-  pointsDisplayElement.setAttribute("id", "result-message-element");
+  const resultMessageElement = document.querySelector("#resultMessage");
 
-  const nextQuestionButtonElement = document.createElement("button");
+  const pointsDisplayElement = document.querySelector("#resultPointsDisplay");
+
+  const nextQuestionButtonElement = document.querySelector("#nextCardButton");
+
   nextQuestionButtonElement.innerHTML = "Next Question &#9758;";
-  nextQuestionButtonElement.setAttribute("id", "next-question-button");
   nextQuestionButtonElement.onclick = handleNextCard;
   if (isCorrectAnswer) {
     resultMessageElement.innerHTML = "You got it right!";
@@ -102,16 +104,10 @@ function createResultCard(isCorrectAnswer) {
   } else {
     resultMessageElement.innerHTML = "You're WRONG :(";
   }
-  cardElement.append(
-    resultMessageElement,
-    pointsDisplayElement,
-    nextQuestionButtonElement
-  );
-  cardsContainerElement.append(cardElement);
 }
 function handleNextCard() {
   const cardElements = document.querySelectorAll(".result-card");
-  cardElements.forEach(element => element.remove());
+  cardContainerElement.classList.remove("flip-card");
   getQuestionsFromAPI();
 }
 function handleSignUpButton() {
@@ -155,7 +151,6 @@ function handleSignUpSubmit(event) {
     fetch(usersURL + "?username=" + username)
       .then(response => response.json())
       .then(json => {
-
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
         userNameElement.innerHTML = username;
@@ -163,7 +158,7 @@ function handleSignUpSubmit(event) {
         userBtnContainer.append(userNameElement);
         currentUser = json;
         closeUserCard();
-      
+
         if (json.length > 0) {
           errorDiv.innerHTML = "Username already taken by another user.";
         } else {
@@ -198,7 +193,7 @@ function handleLogInSubmit(event) {
       errorDiv.innerHTML = "Incorrect Username or Password";
       const user = json[0];
       if (!user || user.password !== password) {
-        event.target.prepend(errorDiv);
+        errorDiv.innerHTML = "Incorrect Username or Password";
       } else {
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
@@ -232,7 +227,7 @@ function updatePointsDOM(points) {
       },
       body: JSON.stringify({ points: newPoints }),
     };
-    fetch(usersURL + currentUser.id, options)
+    fetch(usersURL + currentUser.id, options);
   }
 }
 function init() {
