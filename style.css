@@ -6,11 +6,71 @@
   --color5: #0f4c5c;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  background: cyan;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  background: #fb8b24;
 }
 
-header {
+p {
+  background-color: #9a031e;
+}
+
+.card {
+  background: chartreuse;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  transition: transform 2s linear;
+  transform-style: preserve-3d;
+}
+
+.question-card,
+ card .result-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px;
+  font-size: 3em;
+}
+
+  .question-card {
+  background-color: red;
+  z-index: 2;
+  backface-visibility: hidden;
+  
+}
+
+ .result-card {
+  background-color: royalblue;
+  z-index: 1;
+  transform: rotateY(0deg);
+  backface-visibility:visible;
+}
+
+.flipped {
+  background: white;
+  transform: rotateY(180deg);
+}
+
+.cards-container {
+  -webkit-background-origin: var(--color2);
+  perspective: 1000px;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,26 +78,26 @@ header {
   background-color: var(--color5);
   color: rgb(249, 252, 255);
   padding-bottom:5px;
-}
+} */
 /* brandon changed below this line in header */
 
-body {
+/* body {
   padding-top: 25px;
   padding-right: 40px;
   padding-left: 40px;
   padding-bottom: 0px;
-}
+} */
 
-h1 {
+/* h1 {
   font-family: 'Bungee Shade', cursive;
   font-size: 50px;
   margin-left: 60px;
   border-bottom: 5px var(--color3) solid;
   padding: 0px 40px;
   line-height: 100px;
-}
+} */
 
-#pointsDisplay {
+/* #pointsDisplay {
   font-family: 'Concert One', cursive;
   margin: auto 35px;
   padding: 25px;
@@ -50,19 +110,19 @@ h1 {
   font-size: 25px;
   border-radius: 50%;
   box-shadow: 5px 5px var(--color3);
-}
+} */
 
-.card {
+/* .card {
   height: 100px;
   width: 600px;
   border: solid black 1px;
-}
+} */
 /* Brandon added 1 */
-.answer-label {
-  font-size: 30px;
+/* .answer-label {
+  font-size: 30px; */
 }
 /* Brandon added 2 */
-.question {
+/* .question {
   line-height: 40px;
   padding-right: 40px;
   display: inline-flex;
@@ -70,9 +130,9 @@ h1 {
   margin-left: 40px;
   font-size: 37px;
   color: rgb(44, 44, 43);
-}
+} */
 /* Brandon added 3 */
-.card {
+/* .card {
   top: 50px;
   left: 50px;
   display: flex;
@@ -85,43 +145,42 @@ h1 {
   background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   margin: center;
   box-shadow: 0 0 5px 5px #555;
-}
+} */
 /* brandon added 4 */
-button {
+/* button {
   padding-left: 30px ;
   margin: 0 auto;
   height: 80px;
   width: 200px;
-}
-#next-question-button {
+} */
+/* #next-question-button {
   margin: 20px;
   padding:5px;
-  font-size: 20px;
+  font-size: 20px; */
   /* border-radius: 5px; */
 }
 
 /* #point-display {
   /* font-family: 'Concert One', cursive; */
+
+/* #points-display-element {
+  display: block;
+  padding: 0px;
+  line-height: 50px;
 } */
 
-#points-display-element {
+/* #result-message-element {
   display: block;
   padding: 0px;
   line-height: 50px;
 }
-
-#result-message-element {
-  display: block;
-  padding: 0px;
-  line-height: 50px;
-}
-
+ */
 
 /* brandon added 5 */
-div {
+/* div {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-p {
+} */
+/* p {
   color: #555;
   font-family: "Courier New", Courier, monospace;
   text-decoration: none;
@@ -132,14 +191,13 @@ p {
   margin-left: 40px;
   font-size: 50px;
   color: rgb(44, 44, 43);
-}
+} */
 /* brandon added 6 */
-.cards-container {
+/* .cards-container {
   padding-top: 40px;
   padding-bottom: 10px ;
-}
+} */
 /* brandon added 7 */
-div.card.result-card {
-  padding-top: 2px;
-}
-/* these are special styles */
+/* div.card.result-card {
+  padding-top: 2px;}
+these are special styles */
