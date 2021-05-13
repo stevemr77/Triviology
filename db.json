@@ -4,198 +4,126 @@
       "id": 1,
       "question": "How many states are in the United States?",
       "rightAnswer": "50",
-      "wrongAnswers": [
-        "51",
-        "44",
-        "45"
-      ],
+      "wrongAnswers": ["51", "44", "45"],
       "points": 10
     },
     {
       "id": 2,
       "question": "How long is a soccer match?",
       "rightAnswer": "90 minutes",
-      "wrongAnswers": [
-        "60 minutes",
-        "100 minutes",
-        "30 minutes"
-      ],
+      "wrongAnswers": ["60 minutes", "100 minutes", "30 minutes"],
       "points": 10
     },
     {
       "id": 3,
       "question": "Which of these IS a type of rock climbing?",
       "rightAnswer": "Bouldering",
-      "wrongAnswers": [
-        "Flat Facing",
-        "Open Running",
-        "Read Roping"
-      ],
+      "wrongAnswers": ["Flat Facing", "Open Running", "Read Roping"],
       "points": 10
     },
     {
       "id": 4,
       "question": "What is the capital of Indiana?",
       "rightAnswer": "Indianapolis",
-      "wrongAnswers": [
-        "Minneaopolis",
-        "Merrieum",
-        "Gary"
-      ],
+      "wrongAnswers": ["Minneaopolis", "Merrieum", "Gary"],
       "points": 10
     },
     {
       "id": 5,
       "question": "What is the complementary color of orange?",
       "rightAnswer": "Blue",
-      "wrongAnswers": [
-        "Red",
-        "Yellow",
-        "Green"
-      ],
+      "wrongAnswers": ["Red", "Yellow", "Green"],
       "points": 10
     },
     {
       "id": 6,
       "question": "Which of these is NOT a Vincent Van Gogh painting?",
       "rightAnswer": "The Water Lilly",
-      "wrongAnswers": [
-        "The Starry Night",
-        "Night Cafe",
-        "Iries"
-      ],
+      "wrongAnswers": ["The Starry Night", "Night Cafe", "Iries"],
       "points": 10
     },
     {
       "id": 7,
       "question": "How tall are the Flatirons in Colorado?",
       "rightAnswer": "8,148 ft",
-      "wrongAnswers": [
-        "6,296 ft",
-        "5,768 ft",
-        "9,895 ft"
-      ],
+      "wrongAnswers": ["6,296 ft", "5,768 ft", "9,895 ft"],
       "points": 10
     },
     {
       "id": 8,
       "question": "In which country did jack o'lanterns originate?",
       "rightAnswer": "Ireland",
-      "wrongAnswers": [
-        "The United States",
-        "Mexico",
-        "Russia"
-      ],
+      "wrongAnswers": ["The United States", "Mexico", "Russia"],
       "points": 10
     },
     {
       "id": 9,
       "question": "Which of these is NOT a biblical name?",
       "rightAnswer": "Brandon",
-      "wrongAnswers": [
-        "Michael",
-        "Daniel",
-        "Leah"
-      ],
+      "wrongAnswers": ["Michael", "Daniel", "Leah"],
       "points": 10
     },
     {
       "id": 11,
       "question": "Who is the person with the most Instagram followers? (Hint: He's a soccer player.)",
       "rightAnswer": "Cristiano Ronaldo",
-      "wrongAnswers": [
-        "Messi",
-        "Neymar",
-        "Gerard Pique"
-      ],
+      "wrongAnswers": ["Messi", "Neymar", "Gerard Pique"],
       "points": 10
     },
     {
       "id": 12,
       "question": "What does Marty McFly most hate being called in Back to the Future?",
       "rightAnswer": "a chicken",
-      "wrongAnswers": [
-        "a slowpoke",
-        "a know-it-all ",
-        "a negative Nancy"
-      ],
+      "wrongAnswers": ["a slowpoke", "a know-it-all ", "a negative Nancy"],
       "points": 10
     },
     {
       "id": 13,
       "question": "What was the first soft-drink in Space?",
       "rightAnswer": "Coca-Cola",
-      "wrongAnswers": [
-        "Pepsi",
-        "Mountain Dew",
-        "Sprite"
-      ],
+      "wrongAnswers": ["Pepsi", "Mountain Dew", "Sprite"],
       "points": 10
     },
     {
       "id": 14,
       "question": "Which country has won the most FIFA Women's World Cup?",
       "rightAnswer": "United States",
-      "wrongAnswers": [
-        "Brazil",
-        "England",
-        "Mexico"
-      ],
+      "wrongAnswers": ["Brazil", "England", "Mexico"],
       "points": 10
     },
     {
       "id": 15,
       "question": "Who was Alan Turing?",
       "rightAnswer": "a computer science pioneer",
-      "wrongAnswers": [
-        "a famous actor",
-        "a Founding Father",
-        "CEO of Initech"
-      ],
+      "wrongAnswers": ["a famous actor", "a Founding Father", "CEO of Initech"],
       "points": 10
     },
     {
       "id": 16,
       "question": "What does the word pomodoro translate to in Italian?",
       "rightAnswer": "Tomato",
-      "wrongAnswers": [
-        "Interval",
-        "Productivity",
-        "Puzzle"
-      ],
+      "wrongAnswers": ["Interval", "Productivity", "Puzzle"],
       "points": 10
     },
     {
       "id": 17,
       "question": "How many colors in the rainbow?",
       "rightAnswer": "7",
-      "wrongAnswers": [
-        "5",
-        "6",
-        "10"
-      ],
+      "wrongAnswers": ["5", "6", "10"],
       "points": 10
     },
     {
       "id": 18,
       "question": "Cynophobia is the fear of what?",
       "rightAnswer": "Dogs",
-      "wrongAnswers": [
-        "Geese",
-        "Tomatos",
-        "Bicycles"
-      ],
+      "wrongAnswers": ["Geese", "Tomatos", "Bicycles"],
       "points": 10
     },
     {
       "id": 19,
       "question": "What year did Facebook launch?",
       "rightAnswer": "2004",
-      "wrongAnswers": [
-        "1999",
-        "1991",
-        "2010"
-      ],
+      "wrongAnswers": ["1999", "1991", "2010"],
       "points": 10
     },
     {
@@ -213,88 +141,56 @@
       "id": 21,
       "question": "Which is the loudest animal on Earth?",
       "rightAnswer": "Sperm Whale",
-      "wrongAnswers": [
-        "Rooster",
-        "Green Grocer Cicada",
-        "Howler Monkey"
-      ],
+      "wrongAnswers": ["Rooster", "Green Grocer Cicada", "Howler Monkey"],
       "points": 10
     },
     {
       "id": 22,
       "question": "What is the smallest planet in our solar system?",
       "rightAnswer": "Mercury",
-      "wrongAnswers": [
-        "Venus",
-        "Pluto",
-        "Mars"
-      ],
+      "wrongAnswers": ["Venus", "Pluto", "Mars"],
       "points": 10
     },
     {
       "id": 23,
       "question": "What is the most common type of star found in the Milky Way?",
       "rightAnswer": "Red Dwarf",
-      "wrongAnswers": [
-        "Red Giant",
-        "Neutron",
-        "White Dwarf"
-      ],
+      "wrongAnswers": ["Red Giant", "Neutron", "White Dwarf"],
       "points": 10
     },
     {
       "id": 24,
       "question": "Which NASA space flight was the last manned mission to the moon?",
       "rightAnswer": "Apollo 17",
-      "wrongAnswers": [
-        "Apollo 11",
-        "Apollo 18",
-        "Falcon Heavy"
-      ],
+      "wrongAnswers": ["Apollo 11", "Apollo 18", "Falcon Heavy"],
       "points": 10
     },
     {
       "id": 25,
       "question": "How many moons does Jupiter have?",
       "rightAnswer": "67",
-      "wrongAnswers": [
-        "19",
-        "114",
-        "41"
-      ],
+      "wrongAnswers": ["19", "114", "41"],
       "points": 10
     },
     {
       "id": 26,
       "question": "What was the term used by early Europeans to describe magnetite?",
       "rightAnswer": "Loadstone",
-      "wrongAnswers": [
-        "Magnet",
-        "Alumite",
-        "Leadstone"
-      ],
+      "wrongAnswers": ["Magnet", "Alumite", "Leadstone"],
       "points": 10
     },
     {
       "id": 27,
       "question": "Roughly how many kilometers in 1 Astronomical Unit?",
       "rightAnswer": "1,5000,000km",
-      "wrongAnswers": [
-        "150,000,000km",
-        "1 Light Year",
-        "299,792.458km"
-      ],
+      "wrongAnswers": ["150,000,000km", "1 Light Year", "299,792.458km"],
       "points": 10
     },
     {
       "id": 28,
       "question": "Area 51 is located in which U.S. State?",
       "rightAnswer": "Nevada",
-      "wrongAnswers": [
-        "Arizona",
-        "Oklahoma",
-        "Kansas"
-      ],
+      "wrongAnswers": ["Arizona", "Oklahoma", "Kansas"],
       "points": 10
     },
     {
@@ -312,50 +208,10 @@
       "id": 30,
       "question": "Which of the following languages do not use gender as a part of its grammar?",
       "rightAnswer": "Turkish",
-      "wrongAnswers": [
-        "Hebrew",
-        "Gaelic",
-        "Maltese"
-      ],
+      "wrongAnswers": ["Hebrew", "Gaelic", "Maltese"],
       "points": 10
     }
   ],
   "users": [
-    {
-      "username": "Dirwin",
-      "password": "123",
-      "points": 20,
-      "id": 1
-    },
-    {
-      "username": "Dirwin",
-      "password": "123",
-      "points": 30,
-      "id": 2
-    },
-    {
-      "username": "asdf",
-      "password": "asdf",
-      "points": 0,
-      "id": 3
-    },
-    {
-      "username": "adsf",
-      "password": "asdf",
-      "points": 20,
-      "id": 4
-    },
-    {
-      "username": "michael",
-      "password": "abc",
-      "points": 20,
-      "id": 5
-    },
-    {
-      "username": "michael",
-      "password": "abc",
-      "points": 0,
-      "id": 6
-    }
   ]
 }
