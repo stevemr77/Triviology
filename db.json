@@ -338,6 +338,12 @@
       "password": "asdf",
       "points": 0,
       "id": 3
+    },
+    {
+      "username": "adsf",
+      "password": "asdf",
+      "points": 0,
+      "id": 4
     }
   ]
 }
