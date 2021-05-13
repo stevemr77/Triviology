@@ -213,17 +213,5 @@
     }
   ],
   "users": [
-    {
-      "username": "Dirwin",
-      "password": "123",
-      "points": 20,
-      "id": 1
-    },
-    {
-      "username": "Dirwin",
-      "password": "123",
-      "points": 30,
-      "id": 2
-    }
   ]
 }
