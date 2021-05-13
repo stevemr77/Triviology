@@ -6,7 +6,9 @@
   --color5: #0f4c5c;
 }
 
+
 header {
+  line-height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,6 +17,17 @@ header {
   color: rgb(249, 252, 255);
   padding-bottom: 5px;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
+  
+  border-radius: 8px;
+  background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: 2000px;
+}
+
+
+small {
+  line-height: 0;
+  font-size: 28px;
+  color: rgb(252, 249, 251);
 }
 
 body {
@@ -29,12 +42,17 @@ body {
 
 h1 {
   font-family: "Bungee Shade", cursive;
-  font-size: 50px;
+  font-size: 65px;
   margin: auto 1em;
   padding: 0.2em 0.5em;
   border-bottom: 7px var(--color3) double;
   text-align: center;
   text-justify: center;
+  text-shadow: 0px 40px 20px rgb(1, 36, 51);
+}
+
+quotes {
+  color: rgba(250, 236, 247, .8);
 }
 
 button {
@@ -44,7 +62,7 @@ button {
   margin: 0.5em;
   border: none;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 p {
@@ -63,23 +81,10 @@ p {
   background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
 }
+*/
 /*====User Infrastructure ===== */
 
-#pointsDisplay {
-  font-family: "Concert One", cursive;
-  margin: auto 35px;
-  padding: 25px;
-  background-color: white;
-  color: var(--color4);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  font-size: 25px;
-  border-radius: 50%;
-  box-shadow: 5px 5px var(--color3);
-}
-
-#userDisplay {
+*/ #userDisplay {
   display: flex;
   flex-direction: row;
 }
@@ -89,6 +94,20 @@ p {
   flex-direction: column;
 }
 
+#pointsDisplay {
+  font-family: 'Fredoka One', cursive;
+  margin: 35px;
+  padding: 25px;
+  background-color: white;
+  color: var(--color4);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 25px;
+  border-radius: 50%;
+  box-shadow: 5px 5px var(--color3);
+  
+}
 #logInCardContainer {
   visibility: hidden;
   position: absolute;
@@ -128,6 +147,10 @@ form > div {
   font-size: 12px;
   color: red;
   line-height: 1;
+  background-color: rgba(241, 225, 193, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 30px;
 }
 
 .closeCardButton {
@@ -140,11 +163,21 @@ input {
   margin: 0.5em;
   padding: 0.5em;
   border: none;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 input[type="submit"] {
   color: white;
   background: var(--color1);
+}
+
+label {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(252, 247, 244, .7);
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
 }
 
 #userBtnContainer {
