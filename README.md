@@ -1,3 +1,4 @@
+
 # Quizology
 
 ## Summary
@@ -65,6 +66,3 @@ function shuffleArray(arr) {
 * [Brandon](https://github.com/brandonefields)
 * [Danny](https://github.com/dannyirwin)
 * [Michael](https://github.com/stevemr77)
-
-
-
