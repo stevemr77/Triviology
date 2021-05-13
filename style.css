@@ -1,107 +1,74 @@
 :root {
-  --color1: #5f0f40;
+  --color1: #610f42;
   --color2: #9a031e;
   --color3: #fb8b24;
   --color4: #e36414;
   --color5: #0f4c5c;
 }
 
-main {
-  background: cyan;
-  height:100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-ul {
-  background: #fb8b24;
-}
-
-p {
-  background-color: #9a031e;
-}
-
-.card {
-  background: chartreuse;
-  height: 200px;
-  width: 200px;
-  position: relative;
-  transition: transform 2s linear;
-  transform-style: preserve-3d;
-}
-
-.question-card,
- card .result-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  border-radius: 10px;
-  font-size: 3em;
-}
-
-  .question-card {
-  background-color: red;
-  z-index: 2;
-  backface-visibility: hidden;
-  
-}
-
- .result-card {
-  background-color: royalblue;
-  z-index: 1;
-  transform: rotateY(0deg);
-  backface-visibility:visible;
-}
-
-.flipped {
-  background: white;
-  transform: rotateY(180deg);
-}
-
-.cards-container {
-  -webkit-background-origin: var(--color2);
-  perspective: 1000px;
-}
-
-/* * {
-  box-sizing: border-box;
-} */
-
-/* header {
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
   background-color: var(--color5);
   color: rgb(249, 252, 255);
-  padding-bottom:5px;
-} */
-/* brandon changed below this line in header */
+  padding-bottom: 5px;
+  box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
+}
 
 /* body {
   padding-top: 25px;
   padding-right: 40px;
   padding-left: 40px;
   padding-bottom: 0px;
-} */
+  background-image: url("images/background.jpg");
+  background-size: contain;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
-/* h1 {
-  font-family: 'Bungee Shade', cursive;
+h1 {
+  font-family: "Bungee Shade", cursive;
   font-size: 50px;
-  margin-left: 60px;
-  border-bottom: 5px var(--color3) solid;
-  padding: 0px 40px;
-  line-height: 100px;
-} */
+  margin: auto 1em;
+  padding: 0.2em 0.5em;
+  border-bottom: 7px var(--color3) double;
+  text-align: center;
+  text-justify: center;
+}
 
-/* #pointsDisplay {
-  font-family: 'Concert One', cursive;
+button {
+  margin: 0 auto;
+  background: none;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  align-content: center;
+  color: rgb(44, 44, 43);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 5em auto;
+  border: rgba(85, 85, 85, 0.1) solid 2px;
+  border-radius: 15px;
+  background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
+}
+/*====User Infrastructure ===== */
+
+#pointsDisplay {
+  font-family: "Concert One", cursive;
   margin: auto 35px;
   padding: 25px;
-  text-align: center;
   background-color: white;
   color: var(--color4);
   display: flex;
@@ -112,92 +79,152 @@ p {
   box-shadow: 5px 5px var(--color3);
 } */
 
-/* .card {
-  height: 100px;
-  width: 600px;
-  border: solid black 1px;
-} */
-/* Brandon added 1 */
-/* .answer-label {
-  font-size: 30px; */
-}
-/* Brandon added 2 */
-/* .question {
-  line-height: 40px;
-  padding-right: 40px;
-  display: inline-flex;
-  align-content: center;
-  margin-left: 40px;
-  font-size: 37px;
-  color: rgb(44, 44, 43);
-} */
-/* Brandon added 3 */
-/* .card {
-  top: 50px;
-  left: 50px;
+#userDisplay {
   display: flex;
+  flex-direction: row;
+}
+
+#userBtnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#logInCardContainer {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5em;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+#signUpCard {
+  visibility: hidden;
+  padding: 5em;
+  height: auto;
+}
+#logInCard {
+  visibility: hidden;
+  padding: 5em;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: px;
-  width: 600px;
-  height: 400px;
-  margin: 0 auto;
-  border-radius: 5px;
-  background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
-  margin: center;
-  box-shadow: 0 0 5px 5px #555;
-} */
-/* brandon added 4 */
-/* button {
-  padding-left: 30px ;
-  margin: 0 auto;
-  height: 80px;
-  width: 200px;
-} */
-/* #next-question-button {
-  margin: 20px;
-  padding:5px;
-  font-size: 20px; */
-  /* border-radius: 5px; */
-}
-
-/* #point-display {
-  /* font-family: 'Concert One', cursive; */
-
-/* #points-display-element {
-  display: block;
-  padding: 0px;
-  line-height: 50px;
-} */
-
-/* #result-message-element {
-  display: block;
-  padding: 0px;
-  line-height: 50px;
-}
- */
-
-/* brandon added 5 */
-/* div {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} */
-/* p {
-  color: #555;
-  font-family: "Courier New", Courier, monospace;
-  text-decoration: none;
-  line-height: 40px;
-  padding-right: 40px;
-  display: inline-flex;
   align-content: center;
-  margin-left: 40px;
-  font-size: 50px;
+  width: 90%;
+}
+
+form > div {
+  text-align: center;
+}
+
+.warning {
+  font-size: 12px;
+  color: red;
+  line-height: 1;
+}
+
+.closeCardButton {
+  padding: none;
+  margin: none;
+  height: 2em;
+}
+
+input {
+  margin: 0.5em;
+  padding: 0.5em;
+  border: none;
+}
+
+input[type="submit"] {
+  color: white;
+  background: var(--color1);
+}
+
+#userBtnContainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 2em 0;
+}
+
+#userBtnContainer > * {
+  padding: 1em;
+  font-size: 20px;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+}
+
+#logInButton {
+  border: var(--color1) solid 5px;
+}
+
+#signUpButton {
+  border: var(--color2) solid 5px;
+}
+
+/*=====Question Card=====-*/
+
+.question {
+  padding: 1em;
+  font-size: 30px;
   color: rgb(44, 44, 43);
-} */
-/* brandon added 6 */
-/* .cards-container {
-  padding-top: 40px;
-  padding-bottom: 10px ;
-} */
-/* brandon added 7 */
-/* div.card.result-card {
-  padding-top: 2px;}
-these are special styles */
+}
+
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+
+.answer-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.answer-label {
+  display: flex;
+  font-size: 30px;
+  margin: auto;
+  padding: 0.5em;
+}
+.answer-content {
+  font-size: 20px;
+  margin: 0.5em 1em;
+  min-width: 60px;
+}
+/*===== Result Card ======*/
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+#next-question-button {
+  margin: 5em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 20px;
+}
+
+#result-message-element {
+  margin: 2em;
+  margin-bottom: 0.5em;
+  font-size: 40px;
+  text-justify: center;
+  text-align: center;
+}
+
+/*===== =====*/

@@ -11,8 +11,10 @@ const logInCard = document.querySelector("#logInCard");
 const closeCardButtons = document.querySelectorAll(".closeCardButton");
 const logInForm = document.querySelector("#logInForm");
 const signUpForm = document.querySelector("#signUpForm");
+
 let currentUser;
 let currentUserId;
+
 function getQuestionsFromAPI() {
   fetch(questionsURL)
     .then(response => response.json())
@@ -65,8 +67,10 @@ function createResultCard(isCorrectAnswer) {
   cardElement.classList = "card result-card";
   const resultMessageElement = document.createElement("p");
   resultMessageElement.setAttribute("id", "result-message-element");
+
   const pointsDisplayElement = document.createElement("p");
   pointsDisplayElement.setAttribute("id", "result-message-element");
+
   const nextQuestionButtonElement = document.createElement("button");
   nextQuestionButtonElement.innerHTML = "Next Question &#9758;";
   nextQuestionButtonElement.setAttribute("id", "next-question-button");
@@ -103,30 +107,39 @@ function handleLogInButton() {
   logInCard.style.height = "auto";
   signUpCard.style.height = 0;
 }
+
 function handleSignUpSubmit(event) {
-  //TODO: This
   event.preventDefault();
+  console.log("submit");
   const formData = new FormData(event.target);
   const username = formData.get("username");
   const password = formData.get("password");
+  const confirmPassword = formData.get("confirmPassword");
+
   const newUser = {
     username: username,
     password: password,
     points: parseInt(document.querySelector("#pointsDisplay").innerText),
   };
+
   const errorDiv = document.createElement("p");
   errorDiv.classList.add("warning");
-  if (formData.get("confirmPassword") === password) {
+
+  if (confirmPassword === password) {
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(newUser),
     };
+    //console.log(newUser);
+
     fetch(usersURL, options)
       .then(response => response.json())
       .then(json => {
+        console.log(json);
         const userBtnContainer = document.querySelector("#userBtnContainer");
         const userNameElement = document.createElement("h2");
         userNameElement.innerHTML = username;
@@ -161,7 +174,7 @@ function handleLogInSubmit(event) {
         userBtnContainer.innerHTML = "";
         userBtnContainer.append(userNameElement);
         currentUser = user;
-        updatePointsDOM(user.points);
+        updatePointsDOM(parseInt(user.points));
         closeUserCard();
       }
     });
