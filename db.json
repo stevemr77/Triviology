@@ -464,6 +464,12 @@
       "password": "123",
       "points": 0,
       "id": 24
+    },
+    {
+      "username": "brandon",
+      "password": "1234",
+      "points": 30,
+      "id": 25
     }
   ]
 }

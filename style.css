@@ -17,7 +17,7 @@ header {
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
 }
 
-/* body {
+ body {
   padding-top: 25px;
   padding-right: 40px;
   padding-left: 40px;
@@ -62,7 +62,7 @@ p {
   border-radius: 15px;
   background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
-}
+} */
 /*====User Infrastructure ===== */
 
 #pointsDisplay {
