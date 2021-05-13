@@ -16,17 +16,18 @@ header {
   color: rgb(249, 252, 255);
   padding-bottom: 5px;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
-  text-shadow: 0px 6px 15px rgb(27, 166, 226);
+  text-shadow: 0px 40px 20px rgb(1, 36, 51);
   border-radius: 8px;
   background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
-  background-size: 1500px;
+  background-size: 2000px;
 }
+
 
 small {
   line-height: 0;
   padding: ;
-  font-size: 30px;
-  color: rgb(234, 238, 242);
+  font-size: 28px;
+  color: rgb(250, 236, 247);
 }
 
 body {
@@ -41,12 +42,16 @@ body {
 
 h1 {
   font-family: "Bungee Shade", cursive;
-  font-size: 50px;
+  font-size: 60px;
   margin: auto 1em;
   padding: 0.2em 0.5em;
   border-bottom: 7px var(--color3) double;
   text-align: center;
   text-justify: center;
+}
+
+quotes {
+  color: rgba(250, 236, 247, .8);
 }
 
 button {
@@ -78,7 +83,7 @@ p {
 */
 /*====User Infrastructure ===== */
 
-#pointsDisplay {
+div #pointsDisplay {
   font-family: "Concert One", cursive;
   margin: auto 35px;
   padding: 25px;
@@ -90,6 +95,7 @@ p {
   font-size: 25px;
   border-radius: 50%;
   box-shadow: 5px 5px var(--color3);
+  text-shadow: 0px;
 }
 */ #userDisplay {
   display: flex;
