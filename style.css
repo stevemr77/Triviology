@@ -16,11 +16,15 @@ header {
   color: rgb(249, 252, 255);
   padding-bottom: 5px;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
-  text-shadow: 0px 6px 15px rgb(39, 152, 212);
+  text-shadow: 0px 6px 15px rgb(27, 166, 226);
   border-radius: 8px;
+  background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: 1500px;
 }
 
 small {
+  line-height: 0;
+  padding: ;
   font-size: 30px;
   color: rgb(234, 238, 242);
 
