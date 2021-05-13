@@ -170,6 +170,11 @@ input[type="submit"] {
   border: var(--color2) solid 5px;
 }
 
+.username {
+  font-size: 34px;
+  border-bottom: 5px var(--color3) solid;
+}
+
 /*=====Question Card=====-*/
 
 .question {

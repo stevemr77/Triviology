@@ -32,39 +32,46 @@
     </header>
 
     <div id="logInCardContainer">
-        <div id="signUpCard" class="card">    
-          <form id="signUpForm">
-            <div>
-              <label for="username"> Username: </label>
-              <input name="username" type="text" size="20" required>
-            </div>
-            <p class="warning">WARNING: Do not one of your real passwords. There is absolutely 0 security in the backend and literally anybody can see your password. This is a fake authentication approximation as a learning tool. If in doubt, use something like "1234" as your password.</p>
-            <div>
-              <label for="password">Password: </label>
-              <input name="password" type="password" required>
-            </div>
-            <div>
-              <label for="confirmPassword">Confirm Password: </label>
-              <input name="confirmPassword" type="password" required>
-            </div>
-            <input type="submit" value="Sign Up">
-            <button class="closeCardButton">Go Back</button>
-          </form>
-        </div>
-        <div id="logInCard" class="card">
-          <form id="logInForm">
-            <div>
-              <label for="username"> Username: </label>
-              <input name="username" type="text" size="20">
-            </div>
-            <div>
-              <label for="password">Password: </label>
-              <input name="password" type="password" required>
-            </div>
-            <input type="submit" value="Log In">
-            <button class="closeCardButton">Go Back</button>
-          </form>
-        </div>
+      <div id="signUpCard" class="card">
+        <form id="signUpForm">
+          <p id="signUpErrorDisplay" class="warning"></p>
+          <div>
+            <label for="username"> Username: </label>
+            <input name="username" type="text" size="20" required />
+          </div>
+          <p class="warning">
+            WARNING: Do not one of your real passwords. There is absolutely 0
+            security in the backend and literally anybody can see your password.
+            This is a fake authentication approximation as a learning tool. If
+            in doubt, use something like "1234" as your password.
+          </p>
+          <div>
+            <label for="password">Password: </label>
+            <input name="password" type="password" required />
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password: </label>
+            <input name="confirmPassword" type="password" required />
+          </div>
+          <input type="submit" value="Sign Up" />
+          <button class="closeCardButton">Go Back</button>
+        </form>
+      </div>
+      <div id="logInCard" class="card">
+        <form id="logInForm">
+          <p id="logInErrorDisplay" class="warning"></p>
+          <div>
+            <label for="username"> Username: </label>
+            <input name="username" type="text" size="20" />
+          </div>
+          <div>
+            <label for="password">Password: </label>
+            <input name="password" type="password" required />
+          </div>
+          <input type="submit" value="Log In" />
+          <button class="closeCardButton">Go Back</button>
+        </form>
+      </div>
     </div>
 
     <main>

@@ -322,148 +322,22 @@
   ],
   "users": [
     {
-      "id": 1,
       "username": "Dirwin",
-      "password": "1234",
-      "points": 13160
-    },
-    {
-      "id": 2,
-      "username": "Carl",
-      "password": "1234",
-      "points": 10
-    },
-    {
-      "username": "Lucille",
       "password": "123",
       "points": 20,
+      "id": 1
+    },
+    {
+      "username": "Dirwin",
+      "password": "123",
+      "points": 30,
+      "id": 2
+    },
+    {
+      "username": "asdf",
+      "password": "asdf",
+      "points": 0,
       "id": 3
-    },
-    {
-      "username": "Joe",
-      "password": "123",
-      "points": 0,
-      "id": 4
-    },
-    {
-      "username": "Joe",
-      "password": "123",
-      "points": 0,
-      "id": 5
-    },
-    {
-      "username": "Danny",
-      "password": "123",
-      "points": 158440,
-      "id": 6
-    },
-    {
-      "username": "Danny",
-      "password": "123",
-      "points": 1640,
-      "id": 7
-    },
-    {
-      "username": "Danny",
-      "password": "123",
-      "points": 79220,
-      "id": 8
-    },
-    {
-      "username": "Paul",
-      "password": "123",
-      "points": 1267600,
-      "id": 9
-    },
-    {
-      "username": "Paul",
-      "password": "123",
-      "points": 79220,
-      "id": 10
-    },
-    {
-      "username": "Paul",
-      "password": "123",
-      "points": 1267600,
-      "id": 11
-    },
-    {
-      "username": "Mell",
-      "password": "123",
-      "points": 0,
-      "id": 12
-    },
-    {
-      "username": "Mell",
-      "password": "123",
-      "points": 1267600,
-      "id": 13
-    },
-    {
-      "username": "Bill",
-      "password": "123",
-      "points": 0,
-      "id": 14
-    },
-    {
-      "username": "Bill",
-      "password": "123",
-      "points": 0,
-      "id": 15
-    },
-    {
-      "username": "Joe",
-      "password": "123",
-      "points": 0,
-      "id": 16
-    },
-    {
-      "username": "Joe",
-      "password": "123",
-      "points": 0,
-      "id": 17
-    },
-    {
-      "username": "carl",
-      "password": "123",
-      "points": 0,
-      "id": 18
-    },
-    {
-      "username": "carl",
-      "password": "123",
-      "points": 0,
-      "id": 19
-    },
-    {
-      "username": "al",
-      "password": "123",
-      "points": 0,
-      "id": 20
-    },
-    {
-      "username": "al",
-      "password": "123",
-      "points": 0,
-      "id": 21
-    },
-    {
-      "username": "al",
-      "password": "123",
-      "points": 0,
-      "id": 22
-    },
-    {
-      "username": "kim",
-      "password": "123",
-      "points": 0,
-      "id": 23
-    },
-    {
-      "username": "kim",
-      "password": "123",
-      "points": 0,
-      "id": 24
     }
   ]
 }
