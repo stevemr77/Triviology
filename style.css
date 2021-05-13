@@ -25,9 +25,8 @@ header {
 
 small {
   line-height: 0;
-  padding: ;
   font-size: 28px;
-  color: rgb(250, 236, 247);
+  color: rgb(252, 249, 251);
 }
 
 body {
@@ -83,7 +82,17 @@ p {
 */
 /*====User Infrastructure ===== */
 
-div #pointsDisplay {
+*/ #userDisplay {
+  display: flex;
+  flex-direction: row;
+}
+
+#userBtnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#pointsDisplay {
   font-family: "Concert One", cursive;
   margin: auto 35px;
   padding: 25px;
@@ -97,16 +106,6 @@ div #pointsDisplay {
   box-shadow: 5px 5px var(--color3);
   text-shadow: 0px;
 }
-*/ #userDisplay {
-  display: flex;
-  flex-direction: row;
-}
-
-#userBtnContainer {
-  display: flex;
-  flex-direction: column;
-}
-
 #logInCardContainer {
   visibility: hidden;
   position: absolute;
