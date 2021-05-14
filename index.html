@@ -69,7 +69,6 @@
       </div>
       <div id="logInCard" class="card">
         <form id="logInForm">
-          <p id="logInErrorDisplay" class="warning"></p>
           <div>
             <label href="#" for="username"> Username: </label>
             <input href="#" name="username" type="text" size="20" />
@@ -78,21 +77,34 @@
             <label href="#" for="password">Password: </label>
             <input href="#" name="password" type="password" required />
           </div>
+
           <input class="make-input-like-button" href="#" type="submit" value="Log In" />
           <button href="#" class="closeCardButton">Go Back</button>
+
+          <p id="logInErrorDisplay" class="warning"></p>
+          <input type="submit" value="Log In" />
+          <button class="closeCardButton">Go Back</button>
+          
         </form>
       </div>
     </div>
 
     <main>
-      <div class="cards-container">
-        <div class="card question-card">
-          <p class="question">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
-            architecto aspernatur aliquam accusamus distinctio deserunt a nam
-            iste ad, quaerat labore ut quis incidunt dicta!
-          </p>
-          <ul class="answers-container"></ul>
+      <div class="card-container">
+        <div class="outer-card">
+          <div class="card question-card">
+            <p class="question">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate architecto aspernatur aliquam accusamus distinctio
+              deserunt a nam iste ad, quaerat labore ut quis incidunt dicta!
+            </p>
+            <ul class="answers-container"></ul>
+          </div>
+          <div class="card result-card">
+            <p id="resultMessage"></p>
+            <p id="resultPointsDisplay"></p>
+            <button id="nextCardButton"></button>
+          </div>
         </div>
       </div>
     </main>

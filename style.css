@@ -6,7 +6,6 @@
   --color5: #0f4c5c;
 }
 
-
 header {
   
   line-height: 50px;
@@ -18,12 +17,12 @@ header {
   color: rgb(249, 252, 255);
   padding-bottom: 5px;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
-  
+  margin: 40px;
+
   border-radius: 8px;
   background-image:  url("images/confetti-triviology\ \(1\).jpg");
   background-size: cover;
 }
-
 
 small {
   line-height: 0;
@@ -32,19 +31,16 @@ small {
 }
 
 body {
-  padding-top: 25px;
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-bottom: 0px;
   background-image: url("images/background.jpg");
-  background-size: contain;
+  background-size: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-height: 100vh;
 }
 
 h1 {
   cursor:default;
   font-family: "Bungee Shade", cursive;
-  font-size: 65px;
+  font-size: 50px;
   margin: auto 1em;
   padding: 0.2em 0.5em;
   border-bottom: 7px var(--color3) double;
@@ -54,7 +50,7 @@ h1 {
 }
 
 quotes {
-  color: rgba(250, 236, 247, .8);
+  color: rgba(250, 236, 247, 0.8);
 }
 
 button {
@@ -74,6 +70,7 @@ p {
   color: rgb(44, 44, 43);
 }
 
+
 .card {
   display: flex;
   justify-content: center;
@@ -85,10 +82,10 @@ p {
   background-size: cover;
   box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
 }
-*/
+
 /*====User Infrastructure ===== */
 
-*/ #userDisplay {
+#userDisplay {
   display: flex;
   flex-direction: row;
 }
@@ -99,11 +96,18 @@ p {
 }
 
 #pointsDisplay {
+
   cursor:default;
   font-family: 'Fredoka One', cursive;
   margin: 35px;
   padding: 25px;
   background-color: rgb(249, 252, 255);
+
+  font-family: "Fredoka One", cursive;
+  margin: 35px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 1);
+
   color: var(--color4);
   display: flex;
   justify-content: center;
@@ -111,14 +115,13 @@ p {
   font-size: 25px;
   border-radius: 50%;
   box-shadow: 5px 5px var(--color3);
-  
 }
+
 #logInCardContainer {
   visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5em;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -132,8 +135,8 @@ p {
 }
 #logInCard {
   visibility: hidden;
-  padding: 5em;
   height: auto;
+  padding: 3em;
 }
 
 form {
@@ -149,13 +152,13 @@ form > div {
 }
 
 .warning {
-  font-size: 12px;
+  font-size: 16px;
   color: red;
-  line-height: 1;
-  background-color: rgba(241, 225, 193, 0.5);
+  font-weight: bold;
+
   border-radius: 5px;
-  padding: 15px;
-  padding-bottom: 30px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .closeCardButton {
@@ -182,7 +185,7 @@ input[type="submit"] {
 
 label {
   font-family: "Courier New", Courier, monospace;
-  background-color: rgba(252, 247, 244, .7);
+  background-color: rgba(252, 247, 244, 0.7);
   border-radius: 5px;
   padding: 5px;
   padding-left: 10px;
@@ -205,23 +208,68 @@ label {
 
 #logInButton {
   border: var(--color1) solid 5px;
+  color: var(--color1);
 }
 
 #logInButton:hover {
   background: var(--color1);
+  color: white;
 }
 
 #signUpButton {
   border: var(--color2) solid 5px;
+  color: var(--color2);
 }
 
 #signUpButton:hover {
   background: var(--color2);
+  color: white;
 }
 
 .username {
   font-size: 34px;
   border-bottom: 5px var(--color3) solid;
+}
+
+/*=====Flip Card=====-*/
+.card-container {
+  margin: auto;
+  width: 600px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.outer-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 5em auto;
+  border: rgba(85, 85, 85, 0.1) solid 2px;
+  border-radius: 15px;
+  background-image: url(https://images.unsplash.com/photo-1612538498613-35c5c8d675c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  box-shadow: 20px 20px 10px rgba(85, 85, 85, 0.7);
+}
+
+.flip-card .outer-card {
+  transform: rotateY(180deg);
+}
+
+.question-card,
+.result-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /*=====Question Card=====-*/
@@ -245,6 +293,7 @@ label {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  max-height: 5em;
 }
 
 .answer-button:hover {
@@ -258,6 +307,7 @@ label {
   margin: auto;
   padding: 5px;
   align-self: start;
+  border-radius: 5px;
   color: white;
 }
 
@@ -287,9 +337,10 @@ label {
   flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
+  transform: rotateY(180deg);
 }
 
-#next-question-button {
+#nextCardButton {
   margin: 5em;
   margin-top: 0.5em;
   padding: 0.5em;
@@ -297,16 +348,21 @@ label {
   border: 5px solid var(--color4);
 }
 
-#next-question-button:hover {
+#nextCardButton:hover {
   background: white;
 }
 
-#result-message-element {
+#resultMessage {
   margin: 2em;
   margin-bottom: 0.5em;
   font-size: 40px;
   text-justify: center;
   text-align: center;
+}
+
+#resultPointsDisplay {
+  text-align: center;
+  font-size: 20px;
 }
 
 /*===== =====*/
