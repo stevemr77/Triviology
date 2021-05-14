@@ -34,8 +34,8 @@
       </h1>
       <div id="userDisplay">
         <div id="userBtnContainer">
-          <button id="signUpButton">Sign Up</button>
-          <button id="logInButton">Log In</button>
+          <button href="#" id="signUpButton">Sign Up</button>
+          <button href="#" id="logInButton">Log In</button>
         </div>
         <div id="pointsDisplay">0 Points</div>
       </div>
@@ -46,8 +46,8 @@
         <form id="signUpForm">
           <p id="signUpErrorDisplay" class="warning"></p>
           <div>
-            <label for="username"> Username: </label>
-            <input name="username" type="text" size="20" required />
+            <label href ="#" for="username"> Username: </label>
+            <input href="#" name="username" type="text" size="20" required />
           </div>
           <p class="warning">
             WARNING: Do not one of your real passwords. There is absolutely 0
@@ -56,30 +56,35 @@
             in doubt, use something like "1234" as your password.
           </p>
           <div>
-            <label for="password">Password: </label>
-            <input name="password" type="password" required />
+            <label href="#" for="password">Password: </label>
+            <input href="#" name="password" type="password" required />
           </div>
           <div>
-            <label for="confirmPassword">Confirm Password: </label>
+            <label href="#"for="confirmPassword">Confirm Password: </label>
             <input name="confirmPassword" type="password" required />
           </div>
-          <input type="submit" value="Sign Up" />
-          <button class="closeCardButton">Go Back</button>
+          <input class="make-input-like-button" href="#" type="submit" value="Sign Up" />
+          <button href="#"class="closeCardButton">Go Back</button>
         </form>
       </div>
       <div id="logInCard" class="card">
         <form id="logInForm">
           <div>
-            <label for="username"> Username: </label>
-            <input name="username" type="text" size="20" />
+            <label href="#" for="username"> Username: </label>
+            <input href="#" name="username" type="text" size="20" />
           </div>
           <div>
-            <label for="password">Password: </label>
-            <input name="password" type="password" required />
+            <label href="#" for="password">Password: </label>
+            <input href="#" name="password" type="password" required />
           </div>
+
+          <input class="make-input-like-button" href="#" type="submit" value="Log In" />
+          <button href="#" class="closeCardButton">Go Back</button>
+
           <p id="logInErrorDisplay" class="warning"></p>
           <input type="submit" value="Log In" />
           <button class="closeCardButton">Go Back</button>
+          
         </form>
       </div>
     </div>
