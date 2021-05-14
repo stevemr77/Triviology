@@ -34,8 +34,8 @@ Open another window in your terminal and navigate into the directory where the g
 * Keep tracks of points and updates with every question answered
     (Gif here)
 
-* Players can add their own questions to the game for a more personalized experience
-    (Gif here). 
+* Players can sign up for an account
+    <img src='https://media.giphy.com/media/9zgofTvN2YdalAurg0/giphy.gif' height='450'>
 
 ## Code Snippets
 Randomizes answers so they're not in the same position when the same question loads:
