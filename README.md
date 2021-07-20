@@ -1,8 +1,8 @@
 
-# Quizology
+# Triviology
 
 ## Summary
-Quizology is a trivia game which has fun & curious facts. No particular theme was chosen for the questions but some resounding themes are soccer and space. Players are presented with a trivia question on a card and multiple choice answers. After an answer is selected, the player is informed of whether their selection is right or wrong and given the option to move on to the next question or quit.
+Triviology is a trivia game which has fun & curious facts. No particular theme was chosen for the questions but some resounding themes are soccer and space. Players are presented with a trivia question on a card and multiple choice answers. After an answer is selected, the player is informed of whether their selection is right or wrong and given the option to move on to the next question or quit.
 
 ## Technologies
 * [HTML5](https://www.w3schools.com/html/) 
